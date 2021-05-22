@@ -35,9 +35,9 @@
 
   ## User Story/Stories
   ```md
-    As a business owner
-    I want to be able to view and manage the departments, roles, and employees in my company
-    So that I can organize and plan my business
+  As a business owner
+  I want to be able to view and manage the departments, roles, and employees in my company
+  So that I can organize and plan my business
   ```
 
   ## Key Features
@@ -51,18 +51,24 @@
   * Delete departments, roles, and employees (bonus)
   * View the total utilized budget of a department -- ie the combined salaries of all employees in that department (bonus)
    ```
-  ## Acceptance Criteria (gif from Assignment README.md)
+  ## Acceptance Criteria
+   This following gif was provided in the assignment README.md file and it illustrates the acceptance criteria and shows how the application should work:
+   
    ![Sample Employee Tracker Provided With Assignment](Assets/employee-tracker.gif)
 
   ## Tools
-  The tools used to create this application include: Visual Studio Code, Express.js, JavaScript, Git Bash ----
+  The tools used to create this application include: Visual Studio Code, Node.js, JavaScript, Git Bash, MySQL, 
 
   ## Installation
 
   * [Node JS](https://nodejs.org/en/download/)
   * [MySQL](https://www.npmjs.com/package/mysql) NPM package used to connect to the MySQL database and perform queries
-  * [InquirerJs](https://www.npmjs.com/package/inquirer/v/0.2.3) NPM package used to interact with the user via the command-line
-  * [console.table](https://www.npmjs.com/package/console.table) used to print MySQL rows to the console.
+  * [npm inquirer](https://www.npmjs.com/package/inquirer/v/0.2.3) NPM package used to interact with the user via the command-line
+  * [npm console.table](https://www.npmjs.com/package/console.table) used to print MySQL rows to the console.
+  * [npm chalk](https://www.npmjs.com/package/chalk) used to style terminal strings into chalk-like art
+  * [npm figlet](https://www.npmjs.com/package/figlet) used to turn a string of text into ASCII Art
+  * [npm nodmon](https://www.npmjs.com/package/nodemon) automatically restarts the node application when file changes in the directory are detected
+  * [npm validator](https://www.npmjs.com/package/validator) is a library of string validators and sanitizers
 
 
   ## Use
