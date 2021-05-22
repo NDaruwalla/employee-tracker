@@ -1,6 +1,6 @@
 # Unit 12 MySQL Homework: Employee Tracker
-![Employees](assets/img/employees.png)
-<!-- image from icons8 -->
+![Employees](./assets/img/employees.png)
+<!-- image from icons8 updated -->
 
   ## Description
   I was tasked with creating an interface that makes it easy for non-developers to view and interact with employee information stored in databases. My challenge in making this Content Management System (CMS) was to architect and build a solution for managing a company's employees using node, inquirer, and MySQL.
