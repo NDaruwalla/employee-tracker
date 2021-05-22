@@ -1,5 +1,5 @@
 # Unit 12 MySQL Homework: Employee Tracker
-![Employee Tracker](./assets/img/employees.png)
+![Employees](assets/img/employees.png)
 <!-- image from icons8 -->
 
   ## Description
