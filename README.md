@@ -1,5 +1,5 @@
 # Synergy Employee Tracker
-![Employees](assets/img/employees.png)
+![Employees](Assets/img/employees.png)
 <!-- image from icons8 updated -->
 
   ## Description
@@ -14,10 +14,10 @@
 
   ### Screen Capture
   Page
-  ![Employee Tracker](assets/img/employee-tracker.jpg)
+  ![Employee Tracker](Assets/img/employee-tracker.jpg)
 
   Additional Page
-  ![Employee Tracker](assets/img/employee-tracker2.jpg)
+  ![Employee Tracker](Assets/img/employee-tracker2.jpg)
 
 
   ## Table of Contents
@@ -52,7 +52,7 @@
   * View the total utilized budget of a department -- ie the combined salaries of all employees in that department (bonus)
    ```
   ## Acceptance Criteria (gif from Assignment README.md)
-   ![Sample Employee Tracker Provided With Assignment](assets/employee-tracker.gif)
+   ![Sample Employee Tracker Provided With Assignment](Assets/employee-tracker.gif)
 
   ## Tools
   The tools used to create this application include: Visual Studio Code, Express.js, JavaScript, Git Bash ----
