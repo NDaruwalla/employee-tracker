@@ -1,5 +1,5 @@
 # Unit 12 MySQL Homework: Employee Tracker
-![Employees](./assets/img/employees.png)
+![Employees](Assets/img/employees.png)
 <!-- image from icons8 updated -->
 
   ## Description
@@ -51,7 +51,7 @@
   * Delete departments, roles, and employees (bonus)
   * View the total utilized budget of a department -- ie the combined salaries of all employees in that department (bonus)
    ```
-  ## Acceptance Criteria
+  ## Acceptance Criteria (gif from Assignment README.md)
    ![Sample Employee Tracker Provided With Assignment](Assets/employee-tracker.gif)
 
   ## Tools
