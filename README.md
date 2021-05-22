@@ -1,9 +1,9 @@
-# Unit 12 MySQL Homework: Employee Tracker
-![Employees](Assets/img/employees.png)
+# Synergy Employee Tracker
+![Employees](assets/img/employees.png)
 <!-- image from icons8 updated -->
 
   ## Description
-  I was tasked with creating an interface that makes it easy for non-developers to view and interact with employee information stored in databases. My challenge in making this Content Management System (CMS) was to architect and build a solution for managing a company's employees using node, inquirer, and MySQL.
+  The Synergy Employee Tracker interface makes it easy for non-developers to view and interact with employee information stored in databases. My challenge in making this Content Management System (CMS) was to architect and build a solution for managing a company's employees using node, inquirer, and MySQL.
 
   ### Link to Video Demonstration of Completed Application 
   [Employee Tracker](https://youtubeLINKENTERHERE.com/)
@@ -14,10 +14,10 @@
 
   ### Screen Capture
   Page
-  ![Employee Tracker](./assets/img/employee-tracker.jpg)
+  ![Employee Tracker](assets/img/employee-tracker.jpg)
 
   Additional Page
-  ![Employee Tracker](./assets/img/employee-tracker2.jpg)
+  ![Employee Tracker](assets/img/employee-tracker2.jpg)
 
 
   ## Table of Contents
@@ -52,7 +52,7 @@
   * View the total utilized budget of a department -- ie the combined salaries of all employees in that department (bonus)
    ```
   ## Acceptance Criteria (gif from Assignment README.md)
-   ![Sample Employee Tracker Provided With Assignment](Assets/employee-tracker.gif)
+   ![Sample Employee Tracker Provided With Assignment](assets/employee-tracker.gif)
 
   ## Tools
   The tools used to create this application include: Visual Studio Code, Express.js, JavaScript, Git Bash ----
