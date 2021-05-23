@@ -1,7 +1,7 @@
 -- sample "seed" data to populate the tables to the return of results when queries are run
 
 -- sample data to populate the department table 
-INSERT INTO department(dept_name, department_id)
+INSERT INTO department(dept_name, id)
 VALUES
 ("Sales", 1), 
 ("Human Resources", 2), 
@@ -12,34 +12,84 @@ VALUES
 ("Manufacturing", 7);
 
 -- sample data to populate the role table 
-INSERT INTO role(title, salary, department_id)
+INSERT INTO role(title, id, salary, department_id)
 VALUES
-("Vice President", 900,000, 1), 
-("Senior Director", 600,000, 2), 
-("Director", 250,000, 3), 
-("Senior Manager", 125,000, 4), 
-("Manager", 150,000, 5), 
-("Senior Analyst", 89,000, 6), 
-("Analyst", 79,000, 7), 
+("Vice President", 600, 900,000, 1),
+("Vice President", 600, 900,000, 2),
+("Vice President", 600, 900,000, 3),
+("Vice President", 600, 900,000, 4),
+("Vice President", 600, 900,000, 5),
+("Vice President", 600, 900,000, 6),
+("Vice President", 600, 900,000, 7),
+("Senior Director", 500, 600,000, 1),  
+("Senior Director", 500, 600,000, 2),
+("Senior Director", 500, 600,000, 3),  
+("Senior Director", 500, 600,000, 4), 
+("Senior Director", 500, 600,000, 5),  
+("Senior Director", 500, 600,000, 6), 
+("Senior Director", 500, 600,000, 7), 
+("Director", 400, 250,000, 1), 
+("Director", 400, 250,000, 2), 
+("Director", 400, 250,000, 3), 
+("Director", 400, 250,000, 4), 
+("Director", 400, 250,000, 5), 
+("Director", 400, 250,000, 6),  
+("Director", 400, 250,000, 7), 
+("Senior Manager", 300, 125,000, 1), 
+("Senior Manager", 300, 125,000, 2),
+("Senior Manager", 300, 125,000, 3),
+("Senior Manager", 300, 125,000, 4),
+("Senior Manager", 300, 125,000, 5),
+("Senior Manager", 300, 125,000, 6),
+("Senior Manager", 300, 125,000, 7),
+("Manager", 200, 150,000, 1), 
+("Manager", 200, 150,000, 2), 
+("Manager", 200, 150,000, 3), 
+("Manager", 200, 150,000, 4), 
+("Manager", 200, 150,000, 5), 
+("Manager", 200, 150,000, 6), 
+("Manager", 200, 150,000, 7), 
+("Senior Analyst", 150, 89,000, 1),
+("Senior Analyst", 150, 89,000, 2), 
+("Senior Analyst", 150, 89,000, 3), 
+("Senior Analyst", 150, 89,000, 4), 
+("Senior Analyst", 150, 89,000, 5), 
+("Senior Analyst", 150, 89,000, 6), 
+("Senior Analyst", 150, 89,000, 7),  
+("Analyst", 100, 79,000, 1),
+("Analyst", 100, 79,000, 2),
+("Analyst", 100, 79,000, 3),
+("Analyst", 100, 79,000, 4),
+("Analyst", 100, 79,000, 5),
+("Analyst", 100, 79,000, 6),
+("Analyst", 100, 79,000, 7); 
 
--- sample data to populate the employee table 
+
+-- sample data to populate the employee table
 INSERT INTO employee(first_name, last_name, role_id, manager_id)
 VALUES 
-('Maxine', 'Smith', 1, null), 
-('John', 'Alexander', 2, null), 
-('Fred', 'Brown', 3, 682), 
-('Joanna', 'Albertson', 4, 342), 
-('Nicholas', 'Dars', 5, 845), 
-('Burzin', 'Ferguson', 6, 345), 
-('Cindy', 'Ritts', 7, 652), 
-('Malory', 'Henrickson', 1, null), 
-('Tom', 'Reading', 2, null), 
-('Anna', 'Ellings', 3, null), 
-('Martin', 'Montana', 4, 209), 
-('Mary', 'Jones', 5, 892), 
-('Sally', 'Roberts', 6, 123), 
-('Samantha', 'Wells', 7, 225), 
-('Kelly', 'King', 1, 346), 
-('Peony', 'Lu', 2, 123), 
-('Yolonda', 'Billingsworth', 3, 234);
+('Maxine', 'Smith', 600, null), 
+('John', 'Alexander', 500, null), 
+('Fred', 'Brown', 400, 682), 
+('Joanna', 'Albertson', 400, 342), 
+('Nicholas', 'Dars', 300, 845), 
+('Burzin', 'Ferguson', 300, 345), 
+('Cindy', 'Ritts', 300, 652), 
+('Malory', 'Henrickson', 500, null), 
+('Tom', 'Reading', 500, null), 
+('Anna', 'Ellings', 400, null), 
+('Martin', 'Montana', 200, 209), 
+('Mary', 'Jones', 200, 892), 
+('Sally', 'Roberts', 150, 123), 
+('Samantha', 'Wells', 150, 225), 
+('Kelly', 'King', 150, 346), 
+('Peony', 'Lu', 100, 123), 
+('Yolonda', 'Billingsworth', 100, 234),
+('Manny', 'Marcoza', 200, 209), 
+('Yaha', 'Simpson', 200, 892), 
+('Larry', 'Olbertz', 150, 123), 
+('Thandie', 'Fergus', 150, 225), 
+('Tally', 'Beaumont', 150, 346), 
+('Nema', 'Lancer', 100, 123), 
+('Kara', 'Green', 100, 234);
 
