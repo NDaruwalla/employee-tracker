@@ -68,8 +68,7 @@
   * [npm chalk](https://www.npmjs.com/package/chalk) used to style text color and background in console
   * [npm figlet](https://www.npmjs.com/package/figlet) used to turn a string of text into ASCII Art
   * [npm nodmon](https://www.npmjs.com/package/nodemon) automatically restarts the node application when file changes in the directory are detected
-  * [npm validator](https://www.npmjs.com/package/validator) is a library of string validators and sanitizers
-
+ 
 
   ## Use
   Use this application for non-developers to view and interact with employee information stored in databases.
@@ -89,7 +88,6 @@
   * https://docs.npmjs.com/
   * [SQL Bolt](https://sqlbolt.com/)
   * npm chalk video https://www.youtube.com/watch?v=czsc2rsS3NY
-
   * others as noted in the code comments
 
 

@@ -1,21 +1,23 @@
 // These are my application dependencies
 const connection = require('./config/connection');//links to the sql connection file connection.js
-const validate = require('./javascript/validate');//where the js validation file will be that validates user entries
 const inquirer = require('inquirer');
 const figlet = require('figlet');
-const consTable = require('console.table');//table display in console
+const cTable = require('console.table');
 const chalk = require('chalk');
+
+
 
 // Display the app title and begin the connection
 connection.connect((error) => {
   if (error) throw error;
-  //(https://www.npmjs.com/package/chalk) used to style text color and background in console
-  //(https://www.npmjs.com/package/figlet) used to turn a string of text into ASCII Art
-  console.log(chalk.green.bold(`================================================================`));
+  console.log(chalk.bgMagenta.bold
+    (`||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||`));
   console.log(``);
-  console.log(chalk.orangeBright.bold(figlet.textSync('Synergy Employee Tracker')));
+  console.log(chalk.blue.bold(figlet.textSync('Employee Tracker')));
   console.log(``);
-    console.log(chalk.green.bold(`================================================================`));
+  console.log(``);
+  console.log(chalk.bgMagenta.bold
+    (`||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||`));
   promptUser();
 });
 
@@ -72,5 +74,16 @@ const promptUser = () => {
         if (choices === 'Exit') {
             connection.end();
         }
+  });
+};
+
+// View all Departments
+const viewAllDepartments = () => {
+  const sql = `SELECT department.id AS id, department.department_name AS department FROM department`; 
+    connection.query(sql, (error, response) => {
+    if (error) throw error;
+    console.log(`Here is a view of ALL DEPARTMENTS:`);
+    console.table(response);
+       promptUser();
   });
 };

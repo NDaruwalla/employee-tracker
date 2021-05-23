@@ -6,7 +6,7 @@ USE synergyEmployees;
 -- creates the department table in the synergyEmployees database and adds id and department_name columns 
 CREATE TABLE department (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
-    dept_name VARCHAR(50) NOT NULL
+    department_name VARCHAR(50) NOT NULL
 );
 
 -- creates the role table in the synergyEmployees database and adds id, title, salary and department_id columns 
