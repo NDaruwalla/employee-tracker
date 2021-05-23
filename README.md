@@ -57,15 +57,15 @@
    ![Sample Employee Tracker Provided With Assignment](Assets/employee-tracker.gif)
 
   ## Tools
-  The tools used to create this application include: Visual Studio Code, Node.js, JavaScript, Git Bash, MySQL, 
+  The tools used to create this application include: Visual Studio Code, Node.js, JavaScript, Git Bash, MySQL, Screencastify
 
   ## Installation
 
-  * [Node JS](https://nodejs.org/en/download/)
+  * [Node JS](https://nodejs.org/en/download/) is an asynchronous event-driven JavaScript runtime, designed to build scalable network applications
   * [MySQL](https://www.npmjs.com/package/mysql) NPM package used to connect to the MySQL database and perform queries
   * [npm inquirer](https://www.npmjs.com/package/inquirer/v/0.2.3) NPM package used to interact with the user via the command-line
   * [npm console.table](https://www.npmjs.com/package/console.table) used to print MySQL rows to the console.
-  * [npm chalk](https://www.npmjs.com/package/chalk) used to style terminal strings into chalk-like art
+  * [npm chalk](https://www.npmjs.com/package/chalk) used to style text color and background in console
   * [npm figlet](https://www.npmjs.com/package/figlet) used to turn a string of text into ASCII Art
   * [npm nodmon](https://www.npmjs.com/package/nodemon) automatically restarts the node application when file changes in the directory are detected
   * [npm validator](https://www.npmjs.com/package/validator) is a library of string validators and sanitizers
@@ -73,7 +73,6 @@
 
   ## Use
   Use this application for non-developers to view and interact with employee information stored in databases.
-
 
   ## License
   MIT
@@ -89,6 +88,7 @@
   * https://www.npmjs.com/
   * https://docs.npmjs.com/
   * [SQL Bolt](https://sqlbolt.com/)
+  * npm chalk video https://www.youtube.com/watch?v=czsc2rsS3NY
 
   * others as noted in the code comments
 
