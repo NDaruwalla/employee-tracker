@@ -99,3 +99,22 @@ const viewAllRoles = () => {
   });
 };
 
+// Add a department
+const addDepartment = () => {
+  inquirer
+    .prompt([
+      {
+        name: 'newDepartment',
+        type: 'input',
+        message: 'What is the name of the department you wish to add?',
+      }
+    ])
+    .then((answer) => {
+      let sql = `INSERT INTO department (department_name) VALUES (?)`;
+      connection.query(sql, answer.newDepartment, (error, response) => {
+        if (error) throw error;
+        console.log(`The department was created successfully.`);
+        viewAllDepartments();
+      });
+    });
+};
