@@ -41,16 +41,16 @@
   ```
 
   ## Key Features
-  ```md
+ 
   The command-line application allows the user to:
-  * Add departments, roles, employees
-  * View departments, roles, employees
-  * Update employee roles
-  * Update employee managers *(bonus - not included in this version)*
-  * View employees by manager *(bonus - not included in this version)*
-  * Delete departments, roles, and employees *(bonus - not included in this version)*
-  * View the total utilized budget of a department -- ie the combined salaries of all employees in that department *(bonus - not included in this version)*
-   ```
+  - Add departments, roles, employees
+  - View departments, roles, employees
+  - Update employee roles
+  - Update employee managers *(bonus - not included in this version)*
+  - View employees by manager *(bonus - not included in this version)*
+  - Delete departments, roles, and employees *(bonus - not included in this version)*
+  - View the total utilized budget of a department -- ie the combined salaries of all employees in that department *(bonus - not included in this version)*
+  
   ## Acceptance Criteria
    This following gif provided to me **from the assignment README.md file** illustrates the acceptance criteria and shows how the application should work:
    
