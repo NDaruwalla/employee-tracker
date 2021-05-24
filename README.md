@@ -61,17 +61,17 @@
 
   ## Installation
 
-  * [Node JS](https://nodejs.org/en/download/) is an asynchronous event-driven JavaScript runtime, designed to build scalable network applications
-  * [MySQL](https://www.npmjs.com/package/mysql) NPM package used to connect to the MySQL database and perform queries
-  * [npm inquirer](https://www.npmjs.com/package/inquirer/v/0.2.3) NPM package used to interact with the user via the command-line
-  * [npm console.table](https://www.npmjs.com/package/console.table) used to print MySQL rows to the console.
-  * [npm chalk](https://www.npmjs.com/package/chalk) used to style text color and background in console
-  * [npm figlet](https://www.npmjs.com/package/figlet) used to turn a string of text into ASCII Art
-  * [npm nodmon](https://www.npmjs.com/package/nodemon) automatically restarts the node application when file changes in the directory are detected
+  1. [Node JS](https://nodejs.org/en/download/) is an asynchronous event-driven JavaScript runtime, designed to build scalable network applications
+  2. [MySQL](https://www.npmjs.com/package/mysql) is used to connect to the MySQL database and perform queries
+  3. [npm inquirer](https://www.npmjs.com/package/inquirer/v/0.2.3) is used to interact with the user via the command-line
+  4. [npm console.table](https://www.npmjs.com/package/console.table) is used to print MySQL rows to the console
+  5. [npm chalk](https://www.npmjs.com/package/chalk) is used to style text color and background in console
+  6. [npm figlet](https://www.npmjs.com/package/figlet) is used to turn a string of text into ASCII Art
+  7. [npm nodmon](https://www.npmjs.com/package/nodemon) automatically restarts the node application when file changes in the directory are detected
  
 
   ## Use
-  This application is designed for non-developers to view and interact with employee information stored in a database.
+  The Synergy Employee Tracker is designed for non-developers to view and interact with employee information stored in a database.
 
   ## License
   MIT
@@ -84,11 +84,11 @@
   ## References
   The following references were used to create this application: 
   * #10 Homework assignment: Object-Oriented Programming: Team Profile Generator
-  * https://www.npmjs.com/
-  * https://docs.npmjs.com/
+  * [NPM Overview](https://www.npmjs.com/)
+  * [NPM Docs](https://docs.npmjs.com/)
   * [SQL Bolt](https://sqlbolt.com/)
-  * npm chalk video https://www.youtube.com/watch?v=czsc2rsS3NY
-  * others as noted in the code comments
+  * [NPM Chalk](https://www.youtube.com/watch?v=czsc2rsS3NY)
+  * other websites as noted in the code comments
 
 
   ## Tests

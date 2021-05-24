@@ -235,7 +235,7 @@ const addEmployee = () => {
   ])
     .then(answer => {
     const crit = [answer.fistName, answer.lastName]
-    const roleSql = `SELECT role.id, role.title FROM role`;
+    const roleSql = `SELECT r.id, concat(r.title,', ',d.department_name) as title FROM role r inner join department d on d.id = r.department_id`;
     connection.query(roleSql, (error, data) => {
       if (error) throw error; 
       const roles = data.map(({ id, title }) => ({ name: title, value: id }));
