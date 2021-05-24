@@ -279,3 +279,111 @@ const addEmployee = () => {
   });
 };
 
+// Update an employee role
+const updateEmployeeRole = () => {
+  let sql = `SELECT e.id, e.first_name, e.last_name, r.id AS "role_id" from employee e left join role r on r.id = e.role_id left join department d on  d.id = r.department_id ORDER BY e.first_name, e.last_name;`;
+  let sqlrole = `SELECT DISTINCT r.title FROM role r`;
+  let sqldepartment = `SELECT d.id, d.department_name FROM department d`;
+  let sqlroledepartment = 'SELECT DISTINCT role.id AS "role_id", role.title, department.department_name FROM role inner join department WHERE department.id = role.department_id AND role.id = role.id;';
+  //`SELECT role.id AS "role_id", role.title, department.department_name FROM employee, role, department WHERE department.id = role.department_id AND role.id = employee.role_id`;
+
+  
+  connection.query(sql, (error, responseemployee) => {
+    if (error) throw error;
+    let employeeNamesArray = [];
+    responseemployee.forEach((employee) => {employeeNamesArray.push(`${employee.first_name} ${employee.last_name}`);});
+    
+    connection.query(sqlroledepartment, (error, sqlroledepartment) => {
+      if (error) throw error;
+
+
+    connection.query(sqlrole, (error, responserole) => {
+      if (error) throw error;
+
+    let rolesArray = [];
+    //response.forEach((role) => {rolesArray.push(role.title);});
+    responserole.forEach((role) => {rolesArray.push(`${role.title}`);});
+
+    
+    connection.query(sqldepartment, (error, responsedepartment) => {
+      if (error) throw error;
+  
+      let departmentArray = [];
+      //response.forEach((role) => {rolesArray.push(role.title);});
+      responsedepartment.forEach((department) => {departmentArray.push(`${department.department_name}`);});  
+
+      inquirer
+        .prompt([
+          {
+            name: 'chosenEmployee',
+            type: 'list',
+            message: 'What is the name of the employee who needs a role change?',
+            choices: employeeNamesArray
+          },
+          {
+            name: 'chosenRole',
+            type: 'list',
+            message: 'Select a new role for the employee.',
+            choices: rolesArray
+          },
+          {
+            name: 'chosenDepartment',
+            type: 'list',
+            message: 'Select a new department for the employee.',
+            choices: departmentArray
+          }
+        ])
+        .then((answer) => {
+          let newTitleId = -9999;
+          let employeeId = -9999;
+          
+
+          sqlroledepartment.forEach((role) => {
+            // console.log("role.title: ", role.title);
+            // console.log("answer.chosenRole: ", answer.chosenRole);
+            // console.log("answer.chosenDepartment: ",answer.chosenDepartment);
+            // console.log("role.department_name: ", role.department_name);
+
+            if (answer.chosenRole === role.title & answer.chosenDepartment === role.department_name) {
+              newTitleId = role.role_id;
+            }
+          });
+
+          responseemployee.forEach((employee) => {
+            if (
+              answer.chosenEmployee ===
+              //`${employee.first_name} ${employee.last_name}`
+              (employee.first_name + " " + employee.last_name)
+            ) {
+              employeeId = employee.id;
+            }
+          });
+
+          responsedepartment.forEach((department) => {
+            // console.log("department.department_name:");
+            // console.log(department.department_name);
+            // console.log("answer.chosenDepartment:");
+            // console.log(answer.chosenDepartment);
+            if (
+              answer.chosenDepartment === department.department_name
+            ) {
+              departmentId = department.id;
+            }
+          });
+          
+          if  (newTitleId != -9999 & employeeId != -9999) { 
+          let sqls = `UPDATE employee SET employee.role_id = ? WHERE employee.id = ?`;
+          connection.query(
+            sqls,
+            [newTitleId, employeeId],
+            (error) => {
+              if (error) throw error;
+              console.log(`The employee's role has been updated.`);
+              console.log(newTitleId);
+              console.log(employeeId);
+              promptUser();
+            }
+          )
+          };
+        });
+    })})})})};
