@@ -118,3 +118,21 @@ const addDepartment = () => {
       });
     });
 };
+
+// View all Employees
+const viewAllEmployees = () => {
+  let sql = `select e.id as empID, d.Department_Name, r.title, e.first_name, e.last_name, concat(em.first_name,' ',em.last_name) as Manager_Name
+  from employee e 
+  left join role r on r.id = e.role_id
+  left join department d on  d.id = r.department_id
+  left join employee em on em.id = e.manager_id
+  ORDER BY 2,3,e.role_id;`;
+
+  connection.query(sql, (error, response) => {
+    if (error) throw error;
+    console.log(`Here is a view of ALL EMPLOYEES:`);
+    console.table(response);
+    promptUser();
+  });
+};
+
