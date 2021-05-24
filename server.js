@@ -87,3 +87,15 @@ const viewAllDepartments = () => {
        promptUser();
   });
 };
+
+// View all Roles
+const viewAllRoles = () => {
+  console.log(`Here is a view of ALL ROLES:`);
+  const sql = `SELECT DISTINCT role.id, role.title as role_title, department.department_name AS department FROM role INNER JOIN department ON role.department_id = department.id`;
+  connection.query(sql, (error, response) => {
+    if (error) throw error;
+      console.table(response);
+      promptUser();
+  });
+};
+
