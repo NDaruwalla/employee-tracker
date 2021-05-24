@@ -6,13 +6,15 @@ const cTable = require('console.table');
 const chalk = require('chalk');
 
 
-
 // Display the app title and begin the connection
+//https://www.mysqltutorial.org/mysql-nodejs/connect/
+//https://www.npmjs.com/package/chalk
+// https://github.com/chalk/chalk
 connection.connect((error) => {
   if (error) throw error;
   console.log(chalk.bgMagenta.bold
     (`|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|8|`));
-  console.log((chalk.blue.bold)('Synergy Employee Tracker'));
+  console.log((chalk.blue.bold)('Synergy Employee Tracker (version 1.0)'));
   console.log(chalk.blue.bold(figlet.textSync('Employee Tracker')));
   console.log(``);
   console.log(``);
@@ -22,6 +24,7 @@ connection.connect((error) => {
 });
 
 // Prompt user selection of actions
+// https://www.npmjs.com/package/inquirer
 const promptUser = () => {
   inquirer.prompt([
       {
@@ -76,7 +79,9 @@ const promptUser = () => {
         }
   });
 };
-
+// https://www.npmjs.com/package/mysql
+// https://sqlbolt.com/lesson/select_queries_with_joins
+// https://sqlbolt.com/lesson/select_queries_with_outer_joins
 // View all Departments
 const viewAllDepartments = () => {
   const sql = `SELECT department.id AS id, department.department_name AS department FROM department`; 
@@ -87,6 +92,7 @@ const viewAllDepartments = () => {
        promptUser();
   });
 };
+
 
 // View all Roles
 const viewAllRoles = () => {
@@ -120,6 +126,7 @@ const addDepartment = () => {
 };
 
 // View all Employees
+// My husband helped me write the sql code that uses the short form (one letter) reference to the table name
 const viewAllEmployees = () => {
   let sql = `select e.id as empID, d.Department_Name, r.title, e.first_name, e.last_name, concat(em.first_name,' ',em.last_name) as Manager_Name
   from employee e 
@@ -195,3 +202,80 @@ const addRole = () => {
       };
     });
   };
+
+// Add an employee
+const addEmployee = () => {
+  inquirer.prompt([
+    {
+      type: 'input',
+      name: 'fistName',
+      message: "What is the employee's first name?",
+      validate: addFirstName => {
+        if (addFirstName) {
+            return true;
+        } else {
+            console.log('Please enter the employee first name.');
+            return false;
+        }
+      }
+    },
+    {
+      type: 'input',
+      name: 'lastName',
+      message: "What is the employee's last name?",
+      validate: addLastName => {
+        if (addLastName) {
+            return true;
+        } else {
+            console.log('Please enter the employee last name.');
+            return false;
+        }
+      }
+    }
+  ])
+    .then(answer => {
+    const crit = [answer.fistName, answer.lastName]
+    const roleSql = `SELECT role.id, role.title FROM role`;
+    connection.query(roleSql, (error, data) => {
+      if (error) throw error; 
+      const roles = data.map(({ id, title }) => ({ name: title, value: id }));
+      inquirer.prompt([
+            {
+              type: 'list',
+              name: 'role',
+              message: "What is the employee's role?",
+              choices: roles
+            }
+          ])
+            .then(roleChoice => {
+              const role = roleChoice.role;
+              crit.push(role);
+              const managerSql =  `SELECT * FROM employee`;
+              connection.query(managerSql, (error, data) => {
+                if (error) throw error;
+                const managers = data.map(({ id, first_name, last_name }) => ({ name: first_name + " "+ last_name, value: id }));
+                inquirer.prompt([
+                  {
+                    type: 'list',
+                    name: 'manager',
+                    message: "What is the name of the employee's manager?",
+                    choices: managers
+                  }
+                ])
+                  .then(managerChoice => {
+                    const manager = managerChoice.manager;
+                    crit.push(manager);
+                    const sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id)
+                                  VALUES (?, ?, ?, ?)`;
+                    connection.query(sql, crit, (error) => {
+                    if (error) throw error;
+                    console.log("The new employee has been added.")
+                    viewAllEmployees();
+              });
+            });
+          });
+        });
+     });
+  });
+};
+

@@ -1,9 +1,9 @@
 # Synergy Employee Tracker
 ![Employees](Assets/img/employees.png)
-<!-- image from icons8 updated -->
+<!-- image credit: this image is from icons8-->
 
   ## Description
-  The Synergy Employee Tracker interface makes it easy for non-developers to view and interact with employee information stored in databases. My challenge in making this Content Management System (CMS) was to architect and build a solution for managing a company's employees using node, inquirer, and MySQL.
+  The **Synergy Employee Tracker** interface makes it easy for non-developers to view and interact with employee information stored in a database. My challenge in making this Content Management System (CMS) was to architect and build a solution for managing a company's employees using node, inquirer, and MySQL.
 
   ### Link to Video Demonstration of Completed Application 
   [Employee Tracker](https://youtubeLINKENTERHERE.com/)
@@ -46,18 +46,18 @@
   * Add departments, roles, employees
   * View departments, roles, employees
   * Update employee roles
-  * Update employee managers (bonus)
-  * View employees by manager (bonus)
-  * Delete departments, roles, and employees (bonus)
-  * View the total utilized budget of a department -- ie the combined salaries of all employees in that department (bonus)
+  * Update employee managers *(bonus - not included in this version)*
+  * View employees by manager *(bonus - not included in this version)*
+  * Delete departments, roles, and employees *(bonus - not included in this version)*
+  * View the total utilized budget of a department -- ie the combined salaries of all employees in that department *(bonus - not included in this version)*
    ```
   ## Acceptance Criteria
-   This following gif was provided in the assignment README.md file and it illustrates the acceptance criteria and shows how the application should work:
+   This following gif provided to me **from the assignment README.md file** illustrates the acceptance criteria and shows how the application should work:
    
    ![Sample Employee Tracker Provided With Assignment](Assets/employee-tracker.gif)
 
   ## Tools
-  The tools used to create this application include: Visual Studio Code, Node.js, JavaScript, Git Bash, MySQL, Screencastify
+  The tools used to create this application include: Visual Studio Code, Node.js, JavaScript, Git Bash, MySQL, MySQL Workbench, and Screencastify.
 
   ## Installation
 
@@ -71,7 +71,7 @@
  
 
   ## Use
-  Use this application for non-developers to view and interact with employee information stored in databases.
+  This application is designed for non-developers to view and interact with employee information stored in a database.
 
   ## License
   MIT
