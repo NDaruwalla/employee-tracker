@@ -6,7 +6,7 @@
   The **Synergy Employee Tracker** interface makes it easy for non-developers to view and interact with employee information stored in a database. My challenge in making this Content Management System (CMS) was to architect and build a solution for managing a company's employees using node, inquirer, and MySQL.
 
   ### Link to Video Demonstration of Completed Application 
-  [Employee Tracker](https://youtu.be/AoY1eS2IexU)
+  [Employee Tracker](https://youtu.be/gPHAQ4lVfFg)
   <!-- enter youtube link after recording -->
 
   ### Link to Application Repository on GitHub 
